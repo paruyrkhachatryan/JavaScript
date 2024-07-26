@@ -1,24 +1,15 @@
-/**
- * @param {string} s
- * @return {boolean}
- */
-var isValid = function(s) {
-    if (s.length % 2 === 1) return false 
-    let mobj = {"{":"}","[":"]", "(":")"};
-    let mstack = [];
-    for (let i = 0; i < s.length; i++){
-        if(s[i] in mobj)
-            mstack.push(s[i])
-        else{
-            if(mstack.length === 0)
-                return false;
-            if (mobj[mstack[mstack.length - 1]] !== s[i] )
-                return false;
-            else
-                mstack.pop()
-        } 
-    }
-    if (mstack.length > 0)
-        return false
-    return true
+let myword = prompt("Enter the word :")
+
+function palindrome() {
+    let j = myword.length - 1
+    for (let i = 0; i < j / 2; i++) {
+		if (myword[i] != myword[j]) {
+			return "word is not palindrome!! "
+		}
+		j--
+	}
+    return "The word is palindrome!: "
+
 }
+
+console.log(palindrome())
