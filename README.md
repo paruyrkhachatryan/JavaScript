@@ -1,1 +1,1 @@
-Binary search in Javascript
+Javascript
