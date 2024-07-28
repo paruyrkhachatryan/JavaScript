@@ -3,7 +3,7 @@ let myword = prompt("Enter the word :")
 function palindrome() {
     let j = myword.length - 1
     for (let i = 0; i < j / 2; i++) {
-		if (myword[i] != myword[j]) {
+		if (myword[i].toLowerCase != myword[j].toLowerCase) {
 			return "word is not palindrome!! "
 		}
 		j--
